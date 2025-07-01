@@ -1,0 +1,19 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Tetragric - Climate Insurance";
+}
+<h1>Welcome to Tetragric</h1>
+<p>Secure your future with automated weather insurance and earn carbon credits.</p>
+<p><strong>Sample Forecast:</strong> Drought risk: <span style="color:red">HIGH</span></p>
+<form method="post">
+    <button type="submit" class="btn btn-success">📩 Subscribe for Emission Tracking Reviews</button>
+</form>
+<a asp-page="Login" class="btn btn-primary">🔐 Account Login</a>
+<a asp-page="Register" class="btn btn-secondary">📝 Sign Up</a>
+<hr />
+<a asp-page="Insurance" class="btn btn-outline-secondary">📚 Insurance Service Packages</a>
+<a asp-page="Forecast" class="btn btn-outline-info">🌦️ Predict Climate Weather (Next 3 Years)</a>
+<a asp-page="Emissions" class="btn btn-outline-dark">📄 Download your Emission Reports</a>
+<a asp-page="Support" class="btn btn-outline-warning">💬 Get Support</a>
+
