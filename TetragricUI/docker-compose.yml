@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  tetragric-ui:
+    container_name: tetragric_ui
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+    env_file:
+      - .env
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+    restart: unless-stopped

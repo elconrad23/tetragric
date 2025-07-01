@@ -1,0 +1,86 @@
+services:
+  - type: web
+    name: tetragric-ui
+    runtime: dotnet
+    repo: https://github.com/elconrad23/tetragric
+    branch: main
+    rootDir: TetragricUI
+    buildCommand: dotnet publish -c Release -o out
+    startCommand: dotnet out/TetragricUI.dll
+    env:
+      - key: ASPNETCORE_ENVIRONMENT
+        value: Production
+      - key: ASPNETCORE_URLS
+        value: http://+:10000
+
+      # PostgreSQL connection
+      - key: POSTGRES_DB
+        value: tetragricdb
+      - key: POSTGRES_USER
+        value: tetragricadmin
+      - key: POSTGRES_PASSWORD
+        sync: false
+      - key: POSTGRES_HOST
+        value: tetragric-postgres
+      - key: POSTGRES_PORT
+        value: 5432
+      - key: ConnectionStrings__DefaultConnection
+        value: Host=tetragric-postgres;Port=5432;Database=tetragricdb;Username=tetragricadmin;Password=${POSTGRES_PASSWORD}
+
+      # API Endpoints to Node service
+      - key: ApiEndpoints__Weather
+        value: https://tetragric-node.onrender.com/api/weather
+      - key: ApiEndpoints__Emissions
+        value: https://tetragric-node.onrender.com/api/emissions
+      - key: ApiEndpoints__Claims
+        value: https://tetragric-node.onrender.com/api/claims
+      - key: ApiEndpoints__Reports
+        value: https://tetragric-node.onrender.com/api/reports
+
+      # Lace + metadata
+      - key: Lace__WalletId
+        value: mn_shield-addr_test1lukm2v...
+      - key: ADMIN_EMAIL
+        value: admin@tetragric.com
+      - key: SUPPORT_EMAIL
+        value: support@tetragric.com
+
+  - type: web
+    name: tetragric-node
+    runtime: node
+    repo: https://github.com/elconrad23/tetragric
+    branch: main
+    rootDir: NodeBackend
+    buildCommand: npm install
+    startCommand: node server.js
+    env:
+      - key: NODE_ENV
+        value: production
+      - key: PGHOST
+        value: tetragric-postgres
+      - key: PGDATABASE
+        value: tetragricdb
+      - key: PGUSER
+        value: tetragricadmin
+      - key: PGPASSWORD
+        sync: false
+      - key: PGPORT
+        value: 5432
+      - key: LACE_WALLET_ID
+        value: mn_shield-addr_test1lukm2v...
+
+  - type: pserv
+    name: tetragric-postgres
+    env: docker
+    repo: https://github.com/elconrad23/tetragric
+    branch: main
+    rootDir: PostgresDocker
+    dockerfilePath: ./Dockerfile
+    plan: starter
+    envVars:
+      - key: POSTGRES_DB
+        value: tetragricdb
+      - key: POSTGRES_USER
+        value: tetragricadmin
+      - key: POSTGRES_PASSWORD
+        sync: false
