@@ -1,0 +1,25 @@
+@page
+@model TetragricUI.Pages.EmissionsModel
+@{
+    ViewData["Title"] = "Emission Logs";
+}
+<h2>Your Emissions Overview</h2>
+<p>This page shows logs of reported carbon emissions and reduction trends.</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>Date</th>
+            <th>CO₂ Amount (kg)</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var log in Model.Emissions)
+        {
+            <tr>
+                <td>@log.Timestamp.ToShortDateString()</td>
+                <td>@log.CO2Amount</td>
+            </tr>
+        }
+    </tbody>
+</table>
