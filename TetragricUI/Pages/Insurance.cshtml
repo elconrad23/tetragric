@@ -1,0 +1,18 @@
+@page
+@model TetragricUI.Pages.InsuranceModel
+@{
+    ViewData["Title"] = "Insurance Claim Simulation";
+}
+<h2>Weather Index Insurance</h2>
+<p>Submit your farm location to simulate payout triggers using real-time weather data.</p>
+
+<form method="post">
+    <label for="farmLocation">Farm Location:</label>
+    <input type="text" name="farmLocation" id="farmLocation" required />
+    <button type="submit" class="btn btn-primary">Check Insurance Status</button>
+</form>
+
+@if (Model.StatusMessage != null)
+{
+    <div class="alert alert-info mt-3">@Model.StatusMessage</div>
+}
