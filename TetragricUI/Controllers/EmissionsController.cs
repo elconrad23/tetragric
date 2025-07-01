@@ -26,7 +26,7 @@ namespace Tetragric.Controllers
 
             var result = new
             {
-                chartData = logs.Select(l => l.CO2eAmount),
+                chartData = logs.Select(l => l.CO2Amount),
                 labels = logs.Select(l => l.Timestamp.ToString("MMM"))
             };
 
