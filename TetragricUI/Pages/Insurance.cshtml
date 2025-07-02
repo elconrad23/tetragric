@@ -1,7 +1,7 @@
 @page
 @model TetragricUI.Pages.InsuranceModel
 @{
-    ViewData["Title"] = "Insurance Claim Simulation";
+    ViewData["Title"] = "Insurance Claim Sign up";
 }
 <h2>Weather Index Insurance</h2>
 <p>Submit your farm location to simulate payout triggers using real-time weather data.</p>
@@ -21,6 +21,11 @@
     <button type="submit" class="btn btn-primary">Signup for lace wallet</button>
 </form>
 
+<form method="post">
+    <p>Prefer SMS text notifications?</p>
+    <input type="text" name="userphonenumber" id="userphonenumberid" />
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>
 @if (Model.StatusMessage != null)
 {
     <div class="alert alert-info mt-3">@Model.StatusMessage</div>
