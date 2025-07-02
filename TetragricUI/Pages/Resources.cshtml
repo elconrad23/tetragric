@@ -1,0 +1,21 @@
+@page
+@model ResourcesModel
+@{
+    ViewData["Title"] = "Resources";
+}
+<h2>Resources</h2>
+<input type="text" id="searchBox" placeholder="Search documents..." onkeyup="filterResources()" />
+<ul id="resourceList">
+  <li><a href="/docs/user-guide.pdf" target="_blank">📘 Account User Guide</a></li>
+  <li><a href="/docs/insurance-policy.pdf" target="_blank">📄 Insurance Policy Overview</a></li>
+  <li><a href="https://www.lace.io/" target="_blank">🔗 Blockchain Wallet Service providers</a></li>
+</ul>
+<script>
+function filterResources() {
+  const input = document.getElementById("searchBox").value.toLowerCase();
+  const items = document.querySelectorAll("#resourceList li");
+  items.forEach(li => {
+    li.style.display = li.textContent.toLowerCase().includes(input) ? "" : "none";
+  });
+}
+</script>
