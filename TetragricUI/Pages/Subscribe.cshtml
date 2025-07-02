@@ -1,0 +1,20 @@
+@page
+@model TetragricUI.Pages.SubscribeModel
+@{
+    ViewData["Title"] = "Subscribe";
+}
+<h2>Subscribe to Weather Alerts</h2>
+<p>Stay updated with weather risk alerts and emission tracking insights.</p>
+
+<form method="post">
+    <div class="form-group">
+        <input type="email" asp-for="Email" class="form-control" placeholder="Enter your email" required />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-success">📩 Subscribe</button>
+</form>
+
+@if (Model.SuccessMessage != null)
+{
+    <div class="alert alert-success mt-3">@Model.SuccessMessage</div>
+}
