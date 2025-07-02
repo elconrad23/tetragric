@@ -57,31 +57,12 @@
     }
   }
 </style>
-<div class="hero" aria-label="Welcome section with image background of tea plantations in Uganda">
+<div class="hero" aria-label="Welcome section with image background of coffee plantations in Uganda">
     <h1>Welcome to Tetragric</h1>
     <p>Secure your future with automated weather insurance and earn carbon emission credits.</p>
     <p><strong>Assess  Drought risk</strong></p>
-    <form id="subscribeForm" style="display:inline;" onsubmit="submitSubscription(event)">
-        <input type="email" id="subscriberEmail" placeholder="Enter your email" required />
-        <button type="submit" class="btn btn-success">📩 Subscribe for Emission Tracking Reviews</button>
-    </form>
-<script>
-async function submitSubscription(e) {
-  e.preventDefault();
-  const email = document.getElementById("subscriberEmail").value;
-  try {
-    const res = await fetch("/api/subscribe", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email })
-    });
-    const msg = await res.json();
-    alert("✅ " + msg.message);
-  } catch (err) {
-    alert("⚠️ Subscription failed.");
-  }
-}
-</script>
+    <input type="email" id="subscriberEmail" placeholder="Enter your email" required />
+    <button asp-page="Subscribe" class="btn btn-success">📩 Subscribe for Emission Tracking Reviews</button>
     <hr />
     <a asp-page="Insurance" class="btn btn-outline-success">📚 Insurance Service Packages</a>
     <a asp-page="Forecast" class="btn btn-outline-success">🌦️ Predict Climate Weather (Next 3 Years)</a>
