@@ -40,11 +40,31 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2025 - TetragricUI - <a asp-area="" asp-page="/Privacy">Privacy</a>
+    <footer class="futuristic-footer border-top text-light mt-5">
+    <div class="container py-4 d-flex flex-column flex-md-row justify-content-between align-items-center">
+        <div>
+            <p class="mb-1">&copy; 2025 Tetragric. All rights reserved.</p>
+            <p class="small">Built with blockchain for climate resilience and equity.</p>
         </div>
-    </footer>
+
+        <div class="d-flex gap-3 mb-3 mb-md-0">
+            <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+                <img src="/images/twitter.svg" alt="Twitter" height="24">
+            </a>
+            <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+                <img src="/images/linkedin.svg" alt="LinkedIn" height="24">
+            </a>
+            <a href="https://github.com" target="_blank" aria-label="GitHub">
+                <img src="/images/github.svg" alt="GitHub" height="24">
+            </a>
+        </div>
+
+        <form method="post" asp-page="/Subscribe" asp-page-handler="Join" class="newsletter-form d-flex">
+            <input type="email" name="email" class="form-control form-control-sm" placeholder="Your email" required />
+            <button type="submit" class="btn btn-sm btn-outline-info ms-2">Join Newsletter</button>
+        </form>
+    </div>
+</footer>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
