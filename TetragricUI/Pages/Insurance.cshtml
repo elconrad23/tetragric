@@ -9,7 +9,15 @@
 <form method="post">
     <label for="farmLocation">Farm Location:</label>
     <input type="text" name="farmLocation" id="farmLocation" required />
+    <br/>
+    <label for="farmLocation">Wallet id:</label>
+    <input type="text" name="walletidname" id="walletidid" required />
     <button type="submit" class="btn btn-primary">Check Insurance Status</button>
+</form>
+
+<form method="post">
+    <p>No smart wallet yet? </p>
+    <button type="submit" class="btn btn-primary">Signup for lace</button>
 </form>
 
 @if (Model.StatusMessage != null)
