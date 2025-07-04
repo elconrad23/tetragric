@@ -39,7 +39,7 @@ namespace TetragricUI.Pages
 
                     StatusMessage = $"Based on location '{FarmLocation}', insurance payout threshold is NOT met yet.";
                 }
-                catch (Exception ex)
+                catch (Exception e)
                 {
                     StatusMessage = "Failed to submit insurance request. Try again later.";
                 }
