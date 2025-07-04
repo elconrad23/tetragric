@@ -1,0 +1,24 @@
+@page
+@model TetragricUI.Pages.MyAccountModel
+@{
+    ViewData["Title"] = "My Account";
+}
+<h2>My Account</h2>
+
+@if (Model.IsAuthenticated)
+{
+    <div class="card p-4 shadow">
+        <h4>Hello, @Model.Username!</h4>
+        <p>Email: @Model.Email</p>
+        <p>Wallet: @Model.WalletId</p>
+        <p>Joined: @Model.JoinDate?.ToString("MMM dd, yyyy")</p>
+        <a asp-page="/Dashboard" class="btn btn-outline-primary">Go to Dashboard</a>
+    </div>
+}
+else
+{
+    <div class="alert alert-warning">You are not logged in.</div>
+    <a asp-page="/Login" class="btn btn-primary">Login with lace wallet ID </a>
+    <a asp-page="/Login" class="btn btn-primary">Login with email </a>
+    <a asp-page="/Register" class="btn btn-secondary">Register</a>
+}
