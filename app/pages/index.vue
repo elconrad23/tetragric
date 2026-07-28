@@ -87,8 +87,8 @@ let timer: ReturnType<typeof setInterval> | null = null
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div class="bg-white/90 p-6 rounded-xl border border-slate-100 shadow-sm backdrop-blur-sm">
             <div class="w-10 h-10 rounded-lg bg-sky-100 text-sky-600 flex items-center justify-center font-bold mb-4">01</div>
-            <h4 class="text-lg font-bold text-slate-900 mb-2">Natural tourism cyber security</h4>
-            <p class="text-sm text-slate-600 leading-relaxed">Fully typed environment models defending natural tourism systems against dependency vulnerabilities.</p>
+            <h4 class="text-lg font-bold text-slate-900 mb-2">Rapid insurance service optimization</h4>
+            <p class="text-sm text-slate-600 leading-relaxed">Fully typed environment models to support vulnerable communities facing natural calamities.</p>
           </div>
           <div class="bg-white/90 p-6 rounded-xl border border-slate-100 shadow-sm backdrop-blur-sm">
             <div class="w-10 h-10 rounded-lg bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold mb-4">02</div>
@@ -97,8 +97,8 @@ let timer: ReturnType<typeof setInterval> | null = null
           </div>
           <div class="bg-white/90 p-6 rounded-xl border border-slate-100 shadow-sm backdrop-blur-sm">
             <div class="w-10 h-10 rounded-lg bg-slate-100 text-slate-700 flex items-center justify-center font-bold mb-4">03</div>
-            <h4 class="text-lg font-bold text-slate-900 mb-2">Rapid insurance service optimization</h4>
-            <p class="text-sm text-slate-600 leading-relaxed">Scaffolded on a mobile-first philosophy to load faster on cellular data connections.</p>
+            <h4 class="text-lg font-bold text-slate-900 mb-2">Natural tourism cyber security</h4>
+            <p class="text-sm text-slate-600 leading-relaxed">Scaffolded on a mobile-first philosophy to defend natural tourism systems against dependency vulnerabilities.</p>
           </div>
         </div>
       </section>
