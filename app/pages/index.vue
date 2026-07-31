@@ -17,7 +17,7 @@ let timer: ReturnType<typeof setInterval> | null = null
     <!-- Hero Block -->
     <section 
       class="animate-fade-up py-12 md:py-20 overflow-hidden relative bg-cover bg-center bg-no-repeat"
-      style="background-image: url('/_nuxt/assets/images/hero.jpeg');"
+      style="background-image: url('/_nuxt/assets/images/hero.jpg');"
     >
       <!-- Dark overlay for text readability -->
       <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-[2px]"></div>
@@ -61,13 +61,16 @@ let timer: ReturnType<typeof setInterval> | null = null
             >
               <div :class="['h-full bg-white/95 p-6 sm:p-8 rounded-2xl border-t-4 shadow-xl flex flex-col justify-between transition-transform duration-300 hover:-translate-y-1', slide.accentColor]">
                 <div>
-                  <span class="inline-block text-lg font-bold tracking-wider uppercase bg-slate-100 text-slate-800 px-2.5 py-1 rounded-full mb-6">
-                    {{ slide.badge }}
-                  </span>
+                  <div class="flex items-center gap-3 mb-4">
+                    <span class="text-3xl">{{ slide.icon }}</span>
+                    <span class="inline-block text-lg font-bold tracking-wider uppercase bg-slate-100 text-slate-800 px-2.5 py-1 rounded-full">
+                      {{ slide.badge }}
+                    </span>
+                  </div>
                   <h3 class="text-lg sm:text-2xl font-bold text-slate-800 mb-3">{{ slide.title }}</h3>
-                  <p class="text-sm text-slate-600 mb-6">{{ slide.subtitle }}</p>
+                  <p class="text-sm text-slate-800 mb-6">{{ slide.subtitle }}</p>
                 </div>
-                <a href="#" class="inline-flex items-center gap-2 text-sm font-bold text-sky-600 hover:text-sky-700">Learn Strategy 
+                <a href="#" class="inline-flex items-center gap-2 text-sm font-bold text-[#556B2F] hover:text-[#4A5320]">Learn More 
                     <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                   </svg>
@@ -86,9 +89,9 @@ let timer: ReturnType<typeof setInterval> | null = null
       >
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div class="bg-white/90 p-6 rounded-xl border border-slate-100 shadow-sm backdrop-blur-sm">
-            <div class="w-10 h-10 rounded-lg bg-sky-100 text-sky-600 flex items-center justify-center font-bold mb-4">01</div>
-            <h4 class="text-lg font-bold text-slate-900 mb-2">Natural tourism cyber security</h4>
-            <p class="text-sm text-slate-600 leading-relaxed">Fully typed environment models defending natural tourism systems against dependency vulnerabilities.</p>
+            <div class="w-10 h-10 rounded-lg bg-[#e9efcf] text-[#556B2F] flex items-center justify-center font-bold mb-4">01</div>
+            <h4 class="text-lg font-bold text-slate-900 mb-2">Rapid insurance service optimization</h4>
+            <p class="text-sm text-slate-600 leading-relaxed">Fully typed environment models to support vulnerable communities facing natural calamities.</p>
           </div>
           <div class="bg-white/90 p-6 rounded-xl border border-slate-100 shadow-sm backdrop-blur-sm">
             <div class="w-10 h-10 rounded-lg bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold mb-4">02</div>
@@ -97,8 +100,8 @@ let timer: ReturnType<typeof setInterval> | null = null
           </div>
           <div class="bg-white/90 p-6 rounded-xl border border-slate-100 shadow-sm backdrop-blur-sm">
             <div class="w-10 h-10 rounded-lg bg-slate-100 text-slate-700 flex items-center justify-center font-bold mb-4">03</div>
-            <h4 class="text-lg font-bold text-slate-900 mb-2">Rapid insurance service optimization</h4>
-            <p class="text-sm text-slate-600 leading-relaxed">Scaffolded on a mobile-first philosophy to load faster on cellular data connections.</p>
+            <h4 class="text-lg font-bold text-slate-900 mb-2">Natural tourism cyber security</h4>
+            <p class="text-sm text-slate-600 leading-relaxed">Scaffolded on a mobile-first philosophy to defend natural tourism systems against dependency vulnerabilities.</p>
           </div>
         </div>
       </section>

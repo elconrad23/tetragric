@@ -17,10 +17,10 @@ export function useAppLayout() {
   }
 
   const navLinks: NavLink[] = [
-    { name: 'Home', href: '#' },
-    { name: 'Services', href: '#' },
-    { name: 'About Us', href: '#' },
+    { name: 'Our Services', href: '#' },
+    { name: 'Site Assessment', href: '#' },
     { name: 'Case Studies', href: '#' },
+    { name: 'Us', href: '#' },
     { name: 'Contact', href: '#contact-section' },
   ]
 

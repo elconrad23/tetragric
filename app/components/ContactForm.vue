@@ -80,8 +80,8 @@ const handleFormSubmit = async (): Promise<void> => {
           <input 
             v-model="formData.fullName" 
             type="text" 
-            class="w-full px-4 py-2.5 bg-white border rounded-xl text-sm transition-all focus:outline-none focus:ring-2 focus:ring-sky-500/20"
-            :class="errors.fullName ? 'border-red-400 focus:border-red-400' : 'border-slate-200 focus:border-sky-500'"
+            class="w-full px-4 py-2.5 bg-white border rounded-xl text-sm transition-all focus:outline-none focus:ring-2 focus:ring-[#556B2F]/20"
+            :class="errors.fullName ? 'border-red-400 focus:border-red-400' : 'border-slate-200 focus:border-[#556B2F]'"
             placeholder="JohnMary Deo"
           />
           <p v-if="errors.fullName" class="text-xs text-red-500 mt-1 font-medium">{{ errors.fullName }}</p>
@@ -93,8 +93,8 @@ const handleFormSubmit = async (): Promise<void> => {
           <input 
             v-model="formData.email" 
             type="email" 
-            class="w-full px-4 py-2.5 bg-white border rounded-xl text-sm transition-all focus:outline-none focus:ring-2 focus:ring-sky-500/20"
-            :class="errors.email ? 'border-red-400 focus:border-red-400' : 'border-slate-200 focus:border-sky-500'"
+            class="w-full px-4 py-2.5 bg-white border rounded-xl text-sm transition-all focus:outline-none focus:ring-2 focus:ring-[#556B2F]/20"
+            :class="errors.email ? 'border-red-400 focus:border-red-400' : 'border-slate-200 focus:border-[#556B2F]'"
             placeholder="john@company.com"
           />
           <p v-if="errors.email" class="text-xs text-red-500 mt-1 font-medium">{{ errors.email }}</p>
@@ -106,8 +106,8 @@ const handleFormSubmit = async (): Promise<void> => {
           <textarea 
             v-model="formData.message" 
             rows="4" 
-            class="w-full px-4 py-2.5 bg-white border rounded-xl text-sm transition-all focus:outline-none focus:ring-2 focus:ring-sky-500/20 resize-none"
-            :class="errors.message ? 'border-red-400 focus:border-red-400' : 'border-slate-200 focus:border-sky-500'"
+            class="w-full px-4 py-2.5 bg-white border rounded-xl text-sm transition-all focus:outline-none focus:ring-2 focus:ring-[#556B2F]/20 resize-none"
+            :class="errors.message ? 'border-red-400 focus:border-red-400' : 'border-slate-200 focus:border-[#556B2F]'"
             placeholder="Outline your application needs here..."
           ></textarea>
           <p v-if="errors.message" class="text-xs text-red-500 mt-1 font-medium">{{ errors.message }}</p>
@@ -117,7 +117,7 @@ const handleFormSubmit = async (): Promise<void> => {
         <button 
           type="submit" 
           :disabled="isSubmitting"
-          class="w-full bg-gradient-to-r from-sky-600 to-emerald-600 hover:from-sky-700 hover:to-emerald-700 disabled:from-slate-400 disabled:to-slate-400 text-white font-semibold py-3 px-4 rounded-xl text-sm shadow-md transition-all flex items-center justify-center gap-2"
+          class="w-full bg-gradient-to-r from-[#556B2F] to-emerald-600 hover:from-[#4A5320] hover:to-emerald-700 disabled:from-slate-400 disabled:to-slate-400 text-white font-semibold py-3 px-4 rounded-xl text-sm shadow-md transition-all flex items-center justify-center gap-2"
         >
           <svg v-if="isSubmitting" class="animate-spin h-4 w-4 text-white" fill="none" viewBox="0 0 24 24">
             <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" />

@@ -56,7 +56,7 @@
               class="w-8 h-8 rounded-lg object-cover" 
             />
           <span class="text-xl font-bold tracking-tight text-slate-900">
-            Tetra<span class="text-sky-600"> GRIC </span> Services
+            PLC<span class="text-[#101803]"> 2026 </span>
           </span>
         </div>
 
@@ -66,7 +66,7 @@
             v-for="link in navLinks" 
             :key="link.name" 
             :href="link.href"
-            class="text-sm font-bold text-slate-700 hover:text-sky-600 transition-colors duration-200"
+            class="text-sm font-bold text-slate-700 hover:text-[#556B2F] transition-colors duration-200"
           >
             {{ link.name }}
           </a>
@@ -78,7 +78,7 @@
         <!-- Hamburger Icon Button (Hidden on Desktop) -->
         <button 
           @click="toggleMobileMenu" 
-          class="md:hidden p-2 rounded-lg hover:bg-slate-100 text-slate-600 focus:outline-none focus:ring-2 focus:ring-sky-500"
+          class="md:hidden p-2 rounded-lg hover:bg-slate-100 text-slate-600 focus:outline-none focus:ring-2 focus:ring-[#556B2F]"
           aria-label="Toggle navigation menu"
         >
           <svg v-if="!isMobileMenuOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -121,7 +121,7 @@
                 :key="link.name" 
                 :href="link.href"
                 @click="closeMobileMenu"
-                class="text-lg font-medium text-slate-800 hover:text-sky-700 block py-1"
+                class="text-lg font-medium text-slate-800 hover:text-[#556B2F] block py-1"
               >
                 {{ link.name }}
               </a>
@@ -146,7 +146,7 @@
       <div class="max-w-7xl mx-auto px-4 py-12 md:py-16 grid grid-cols-1 md:grid-cols-4 gap-8">
         <div class="space-y-4">
           <div class="flex items-center gap-2">
-            <div class="w-6 h-6 rounded bg-sky-500 flex items-center justify-center text-white font-bold text-xs">T</div>
+            <div class="w-6 h-6 rounded bg-[#556B2F] flex items-center justify-center text-white font-bold text-xs">T</div>
             <span class="text-white font-bold tracking-tight">TetraGRIC SOLUTIONS</span>
           </div>
           <p class="text-medium font-semibold leading-relaxed text-slate-300">
@@ -161,8 +161,8 @@
           <h3 class="text-white font-semibold align-center text-sm mb-4 tracking-wider uppercase">Solutions</h3>
           <ul class="space-y-2.5 text-sm">
             <li><a href="#" class="hover:text-sky-400 transition-colors">Blockchain Insurance</a></li>
-            <li><a href="#" class="hover:text-emerald-400 transition-colors">Water Resource Data Management</a></li>
-            <li><a href="#" class="hover:text-sky-400 transition-colors">Natural Tourism Cyber Security</a></li>
+            <li><a href="#" class="hover:text-emerald-400 transition-colors">Natural Resource Data Management</a></li>
+            <li><a href="#" class="hover:text-sky-400 transition-colors">Natural Resource Preservation</a></li>
             <li><a href="#" class="hover:text-sky-400 transition-colors">Green Energy Data Analytics</a></li>
           </ul>
         </div>
